@@ -244,7 +244,7 @@ function includeFont(name, url, format){
     s.innerHTML = "@font-face { font-family: '" + name + "'; src: url('" + url + "') format('" + format + "');}"
     document.head.appendChild(s);
     };
-includeFont('fnt1', 'js/fnt1.ttf', 'truetype');
+includeFont('fnt1', 'fnt1.ttf', 'truetype');
 function dRfh(){window.location.reload()};
 //document.location.href+=''
 
