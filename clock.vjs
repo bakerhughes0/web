@@ -1,5 +1,10 @@
 sBkC(document.body,'#456')
 
+var b=new xBtn();
+move(b,[10,10,100,30]);
+sTxt(b,'OK');
+sPar(b,0);
+
 var cl0=new clock1();
 move(cl0,[0,0,250,250])
 sPar(cl0,0)
