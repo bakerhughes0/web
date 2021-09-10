@@ -33,12 +33,13 @@ function kpi() {
     }
   sTrx(o, 'all .4s ease-in-out');
   sShd(o,2,2,0,12,'#224',0);
+  sMoP(o.val,'pointer');
   return o;
   };
 
 var bk = new xDiv();sPar(bk,0);move(bk,[0,0,680,600]);
-sBkL(bk,0,'#66D 0%, #77e 100%');
 sBkL(bk,0,'#ccc 0%, #dde 100%');
+
 
 k = [];
 k.push(new kpi());
@@ -59,10 +60,18 @@ sPar(k[2],0);
 sTxt(k[2].tit,'WO START IN THE PAST');
 sTxt(k[2].val,'53');
 
+k.push(new kpi());
+move(k[3],[-200,-100,200,100]);
+sPar(k[3],0);
+sTxt(k[3].tit,'WO TO RELEASE');
+sTxt(k[3].val,'53');
+
 setTimeout(function(){
-move(k[0],[20,20,200,100]);
-move(k[1],[240,20,200,100]);
-move(k[2],[460,20,200,100]);
+var x=20;move(k[0],[x,20,200,100]);
+x+=220;move(k[1],[x,20,200,100]);
+x+=220;move(k[2],[x,20,200,100]);
+x+=220;move(k[3],[x,20,200,100]);
+move(bk,[0,0,20+k.length*220,800])
 },1);
 
 
