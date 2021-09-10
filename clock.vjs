@@ -1,4 +1,4 @@
-  sBkC(document.body,'#358');
+sBkC(document.body,'#358');
   var c=new clock01();
   move(c,[10,10,500,500]);
   sPar(c,0);
