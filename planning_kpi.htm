@@ -31,6 +31,10 @@ function kpi() {
     move(o.tit, [0,0,d[0]-2,20]); 
     move(o.val, [0,20,d[0]-2,d[1]-22]); 
     }
+  sThS(o,function(evt){
+    document.title = '#'+gTxt(o.tit);
+    });
+
   sTrx(o, 'all .4s ease-in-out');
   sShd(o,2,2,0,12,'#224',0);
   sMoP(o.val,'pointer');
@@ -73,6 +77,7 @@ x+=220;move(k[2],[x,20,200,100]);
 x+=220;move(k[3],[x,20,200,100]);
 move(bk,[0,0,20+k.length*220,800])
 },1);
+
 
 
 
