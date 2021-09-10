@@ -1,7 +1,5 @@
- sBkC(document.body,'#456')
+  sBkC(document.body,'#456')
  var cl0=new clock1();
  move(cl0,[0,0,250,250]);
  sPar(cl0,0);
  cScr(cl0);
-
-
