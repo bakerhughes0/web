@@ -9,11 +9,64 @@
 <script LANGUAGE=Javascript>
 window.onload = main;
 function main() {
-  sBkC(document.body,'#358')
-  var c=new clock1();
-  move(c,[10,10,400,400]);
-  sPar(c,0);
-  //cScr(c);
+function kpi() {
+  var o = new xDiv();
+  sBrW(o, [1]);
+  sBrR(o, [4]);
+  sBrC(o, '#333');
+  sBkC(o, '#568');
+  o.tit = new xLab();
+  sFtC(o.tit, '#ffe');
+  sBrW(o.tit, [0,0,1,0]);
+  sBrC(o.tit, ['#bbb']);
+  sPad(o.tit, [0,0,0,4]);
+  sPar(o.tit, o);
+  o.val = new xLab();
+  sFtC(o.val, '#fff');
+  sBrC(o.val, ['#bbb']);
+  sFtA(o.val,'center')
+  sPar(o.val, o);
+  o.eRes = function() {
+    var d = gSiz(o);
+    move(o.tit, [0,0,d[0]-2,20]); 
+    move(o.val, [0,20,d[0]-2,d[1]-22]); 
+    }
+  sTrx(o, 'all .4s ease-in-out');
+  sShd(o,2,2,0,12,'#224',0);
+  return o;
+  };
+
+var bk = new xDiv();sPar(bk,0);move(bk,[0,0,680,600]);
+sBkL(bk,0,'#66D 0%, #77e 100%');
+sBkL(bk,0,'#ccc 0%, #dde 100%');
+
+k = [];
+k.push(new kpi());
+move(k[0],[-200,-100,200,100]);
+sPar(k[0],bk);
+sTxt(k[0].tit,'SMAD TO ASSIGN');
+sTxt(k[0].val,'12');
+
+k.push(new kpi());
+move(k[1],[-200,-100,200,100]);
+sPar(k[1],0);
+sTxt(k[1].tit,'PMAD IN THE PAST');
+sTxt(k[1].val,'23');
+
+k.push(new kpi());
+move(k[2],[-200,-100,200,100]);
+sPar(k[2],0);
+sTxt(k[2].tit,'WO START IN THE PAST');
+sTxt(k[2].val,'53');
+
+setTimeout(function(){
+move(k[0],[20,20,200,100]);
+move(k[1],[240,20,200,100]);
+move(k[2],[460,20,200,100]);
+},1);
+
+
+
   }
 </script>
 </head><body></body></html>
