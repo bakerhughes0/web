@@ -56,10 +56,10 @@ o.set_clock = function(){
   var angle = minute * 2 * pi / 60 - pi / 2
   o.needle(angle, 0.05, 0.85,'#eee')
   o.ctx.lineWidth = 2
-  var second = now.getSeconds()       // + now.getMilliseconds() / 1000
+  var second = now.getSeconds()    + now.getMilliseconds() / 1000
   var angle = second * 2 * pi / 60 - pi / 2
   o.needle(angle, 0.15, 0.85, '#a23')
-  setTimeout(o.set_clock,1000);
+  setTimeout(o.set_clock,500);
   }
 with (o.ctx) {
   beginPath()
