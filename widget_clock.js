@@ -1,4 +1,4 @@
-function clock01(){
+function clock1(){
 var o=document.createElement('canvas');
 o.width=250;o.height=250
 move(o,[0,0,250,250]);
@@ -56,10 +56,10 @@ o.set_clock = function(){
   var angle = minute * 2 * pi / 60 - pi / 2
   o.needle(angle, 0.05, 0.85,'#eee')
   o.ctx.lineWidth = 2
-  var second = now.getSeconds() + now.getMilliseconds() / 1000
+  var second = now.getSeconds()       // + now.getMilliseconds() / 1000
   var angle = second * 2 * pi / 60 - pi / 2
   o.needle(angle, 0.15, 0.85, '#a23')
-  setTimeout(o.set_clock,160);
+  setTimeout(o.set_clock,1000);
   }
 with (o.ctx) {
   beginPath()
