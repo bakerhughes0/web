@@ -1,1 +1,10 @@
 
+var a=new xBtn();
+a.bold=1;
+move(a,[10,10,210,24]);
+sTxt(a,"This is my standard font");
+a.eClk= function() {
+alert("!");
+}
+
+sPar(a,0);
