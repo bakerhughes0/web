@@ -1,4 +1,3 @@
-print code
  sBkC(document.body,'#456')
  var cl0=new clock1();
  move(cl0,[0,0,250,250]);
